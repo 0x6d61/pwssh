@@ -14,9 +14,10 @@ class SshCracker {
 										string password = reader.ReadLine();
 										if(true == SshConnection(args[0],args[1],password,22)) {
 												Console.WriteLine("password is {0}",password);
-												break;
+												return;
 										}
 								}
+								Console.WriteLine("password not found XP");
 						}else{
 								Console.WriteLine("file not found");
 						}
